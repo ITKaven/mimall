@@ -118,23 +118,23 @@
             <input type="text" class="input" placeholder="手机号" v-model="checkedItem.receiverMobile">
           </div>
           <div class="item">
-            <select name="province" v-model="checkedItem.receiverProvince">
+            <select name="province" placeholder="省份" v-model="checkedItem.receiverProvince">
+              <option value="湖南">湖南</option>
               <option value="北京">北京</option>
-              <option value="天津">天津</option>
-              <option value="河北">河北</option>
+              <option value="上海">上海</option>
             </select>
-            <select name="city" v-model="checkedItem.receiverCity">
-              <option value="北京">北京</option>
-              <option value="天津">天津</option>
-              <option value="河北">石家庄</option>
+            <select name="city" placeholder="城市" v-model="checkedItem.receiverCity">
+              <option value="长沙">长沙</option>
+              <option value="衡阳">衡阳</option>
+              <option value="岳阳">岳阳</option>
             </select>
-            <select name="district" v-model="checkedItem.receiverDistrict">
-              <option value="北京">昌平区</option>
-              <option value="天津">海淀区</option>
-              <option value="河北">东城区</option>
-              <option value="天津">西城区</option>
-              <option value="河北">顺义区</option>
-              <option value="天津">房山区</option>
+            <select name="district" placeholder="区" v-model="checkedItem.receiverDistrict">
+              <option value="岳麓区">岳麓区</option>
+              <option value="开福区">开福区</option>
+              <option value="芙蓉区">芙蓉区</option>
+              <option value="雨花区">雨花区</option>
+              <option value="望城区">望城区</option>
+              <option value="天心区">天心区</option>
             </select>
           </div>
           <div class="item">
@@ -197,7 +197,7 @@ export default{
       this.checkedItem = {};
       this.showEditModal = true;
     },
-    // 打开新增地址弹框
+    // 编辑新增地址弹框
     editAddressModal(item){
       this.userAction = 1;
       this.checkedItem = item;

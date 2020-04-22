@@ -6,11 +6,11 @@
     </div>             
     <div class="footer-link">
       <a href="https://kaven.blog.csdn.net/" target="_blank">Kaven博客主页</a><span>|</span>
-      <a href="https://github.com/ITKaven" target="_blank">Kaven'Github</a><span>|</span>
+      <a href="https://github.com/ITKaven" target="_blank">Kaven代码仓库</a><span>|</span>
       <a href="https://kaven.blog.csdn.net/article/details/104233588" target="_blank">Java并发编程</a><span>|</span>
       <a href="https://kaven.blog.csdn.net/article/details/104109975" target="_blank">Java设计模式</a>
     </div>
-    <div class="copyright">Copyright ©2019 <span class="domain">kaven.top</span> All Rights Reserved.</div>
+    <div class="copyright">ICP备案/许可证编号：<a href="http://beian.miit.gov.cn/" target="_blank" class="icp">湘ICP备19001321号</a> | Copyright ©2019 <span class="domain">kaven.top</span> All Rights Reserved.</div>
   </div>
 </template>
 <script>
@@ -48,6 +48,9 @@
     .copyright{
       .domain{
         color:#FF6600;
+      }
+      .icp{
+        color:#999999;
       }
     }
   }

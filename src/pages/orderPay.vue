@@ -115,7 +115,7 @@ export default{
       }else{
         this.axios.post('/pay',{
           orderId:this.orderId,
-          orderName:'Vue高仿小米商城',
+          orderName:'Kaven商城微信支付',
           amount:0.01,//单位元
           payType:2 //1支付宝，2微信
         }).then((res)=>{

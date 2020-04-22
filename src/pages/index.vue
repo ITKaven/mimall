@@ -71,9 +71,11 @@
           <div class="list-box">
             <div class="list" v-for="(arr,i) in phoneList" v-bind:key="i">
               <div class="item" v-for="(item,j) in arr" v-bind:key="j">
-                <span v-bind:class="{'new-pro':j%2==0}">新品</span>
+                <span v-bind:class="{'new-pro':(i*2+j*7)%3==0}">新品</span>
                 <div class="item-img">
-                  <img v-lazy="item.mainImage" alt="">
+                  <a v-bind:href="'/#/product/'+item.id">
+                      <img v-lazy="item.mainImage" alt="">
+                  </a>
                 </div>
                 <div class="item-info">
                   <h3>{{item.name}}</h3>
@@ -176,7 +178,102 @@
               name:'移动4G专区',
             }
           ],
-          [0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]
+          [
+            {
+               id:30,
+               img:'/imgs/item-box-1.png',
+               name:'小米CC9',
+             },{
+               id:31,
+               img:'/imgs/item-box-2.png',
+               name:'小米8青春版',
+             },{
+                id:32,
+                img:'/imgs/item-box-3.jpg',
+                name:'Redmi K20 Pro',
+             },{
+                id:33,
+                img:'/imgs/item-box-4.jpg',
+                name:'移动4G专区',
+             }
+           ],
+           [
+                {
+                    id:30,
+                    img:'/imgs/item-box-1.png',
+                    name:'小米CC9',
+                },{
+                    id:31,
+                    img:'/imgs/item-box-2.png',
+                    name:'小米8青春版',
+                },{
+                    id:32,
+                    img:'/imgs/item-box-3.jpg',
+                    name:'Redmi K20 Pro',
+                },{
+                    id:33,
+                    img:'/imgs/item-box-4.jpg',
+                    name:'移动4G专区',
+                }
+            ],
+            [
+                {
+                    id:30,
+                    img:'/imgs/item-box-1.png',
+                    name:'小米CC9',
+                },{
+                    id:31,
+                    img:'/imgs/item-box-2.png',
+                    name:'小米8青春版',
+                },{
+                    id:32,
+                    img:'/imgs/item-box-3.jpg',
+                    name:'Redmi K20 Pro',
+                },{
+                    id:33,
+                    img:'/imgs/item-box-4.jpg',
+                    name:'移动4G专区',
+                }
+            ],
+            [
+                {
+                    id:30,
+                    img:'/imgs/item-box-1.png',
+                    name:'小米CC9',
+                },{
+                    id:31,
+                    img:'/imgs/item-box-2.png',
+                    name:'小米8青春版',
+                },{
+                    id:32,
+                    img:'/imgs/item-box-3.jpg',
+                    name:'Redmi K20 Pro',
+                },{
+                    id:33,
+                    img:'/imgs/item-box-4.jpg',
+                    name:'移动4G专区',
+                }
+            ],
+            [
+                {
+                    id:30,
+                    img:'/imgs/item-box-1.png',
+                    name:'小米CC9',
+                },{
+                    id:31,
+                    img:'/imgs/item-box-2.png',
+                    name:'小米8青春版',
+                },{
+                    id:32,
+                    img:'/imgs/item-box-3.jpg',
+                    name:'Redmi K20 Pro',
+                },{
+                    id:33,
+                    img:'/imgs/item-box-4.jpg',
+                    name:'移动4G专区',
+                }
+            ]
+          // [0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]
         ],
         adsList:[
           {
@@ -208,7 +305,7 @@
             pageSize:14
           }
         }).then((res)=>{
-          res.list = res.list.slice(6,14);
+          res.list = res.list.slice(1,14);
           this.phoneList = [res.list.slice(0,4),res.list.slice(4,8)];
         })
       },

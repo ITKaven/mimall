@@ -17,11 +17,11 @@
           <h2 class="item-title">{{product.name}}</h2>
           <p class="item-info">相机全新升级 / 960帧超慢动作 / 手持超级夜景 / 全球首款双频GPS / 骁龙845处理器 / 红<br/>外人脸解锁 / AI变焦双摄 / 三星 AMOLED 屏</p>
           <div class="delivery">小米自营</div>
-          <div class="item-price">{{product.price}}元<span class="del">1999元</span></div>
+          <div class="item-price">{{product.price}}元<span class="del">{{product.price+200}}元</span></div>
           <div class="line"></div>
           <div class="item-addr">
             <i class="icon-loc"></i>
-            <div class="addr">北京 北京市 朝阳区 安定门街道</div>
+            <div class="addr">湖南 长沙市 岳麓区 湖南工商大学</div>
             <div class="stock">有现货</div>
           </div>
           <div class="item-version clearfix">
